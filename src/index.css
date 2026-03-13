@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Outfit:wght@100..900&family=Sofia+Sans+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap");
+@import "tailwindcss";
+
+:root {
+  --bg-color: #f7f7f7;
+  --text-color: #101010;
+  --text-gray-color: #908c8c;
+  --text-gray-second-color: #aaaaaa;
+  --white: #ffffff;
+  --transition-main: cubic-bezier(0.11, 0.82, 0.39, 0.92);
+  font-family: "Sofia Sans Condensed", sans-serif;
+}
+
+::selection {
+  background: var(--text-color);
+  color: var(--bg-color);
+}
+
+html,
+body {
+  scroll-behavior: auto;
+}
+
+body {
+  font-family: "Sofia Sans Condensed";
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1800rem;
+  margin: 0 auto;
+  padding: 0 15rem;
+}
+
+.title {
+  font-family: "Sofia Sans Condensed";
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 146rem;
+  line-height: 99%;
+  letter-spacing: -8%;
+  text-transform: uppercase;
+}
+
+.link-line {
+  position: relative;
+  padding-bottom: 5rem;
+  display: flex;
+  align-items: center;
+}
+
+.link-line svg {
+  margin-left: 20rem;
+  width: 18rem;
+  height: 18rem;
+  transition: transform 0.5s var(--transition-main);
+}
+
+.link-line:before {
+  background-color: rgb(239, 239, 239);
+  bottom: 0;
+  content: "";
+  height: 2rem;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.8s var(--transition-main);
+  transition-delay: 0s;
+}
+
+.link-line:after {
+  background-color: rgb(239, 239, 239);
+  bottom: 0;
+  content: "";
+  height: 2rem;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.8s var(--transition-main);
+  transition-delay: 0s;
+}
+
+.link-line:hover:before {
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s var(--transition-main);
+  transition-delay: 0s;
+}
+
+.link-line:hover:after {
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.8s var(--transition-main);
+  transition-delay: 0s;
+}
+
+.link-line:hover svg {
+  transform: rotate(45deg);
+}
+
+.reveal-title {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.reveal-line span {
+  display: inline-block;
+}
+
+.canvas-text {
+  width: 100% !important;
+  height: 100dvh !important;
+}
+
+.animation-title {
+  overflow: hidden;
+  padding: 0 10rem 0 0;
+}
+
+.aniamtion-title span {
+  margin: 0 20rem;
+  display: inline-block;
+}
+
+.animation-title span:not(.letter) {
+  margin: 0 20rem;
+}
+
+.animation-title span .letter {
+  font-family: Sofia Sans Condensed;
+  font-weight: 700;
+  line-height: 99%;
+  text-transform: uppercase;
+  margin: 0;
+  display: inline-block;
+}
+
+section:not(.hero) {
+  opacity: 0;
+  pointer-events: none;
+}
+
+main {
+  opacity: 0;
+}
+
+.hero-title .hero-word:last-child::after {
+  opacity: 0;
+}
+
+a {
+  pointer-events: none;
+}
+
+body.loaded section,
+body.loaded a,
+body.loaded .header,
+body.loaded main {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+body.loaded .hero-title .hero-word:last-child::after {
+  opacity: 1;
+}
+
+.slide-page-transition {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #101010;
+  z-index: 100000000;
+}
+
+.app-active .slide-page-transition,
+.app-active .slide-page-transition-second {
+  opacity: 1;
+}
+
+@media (max-width: 1100px) {
+  body,
+  html {
+    overflow: hidden;
+  }
+
+  .animation-title span:not(.letter) {
+    margin: 0 10px 0 0;
+  }
+
+  .scroll-container {
+    height: 100dvh;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+
+  .link-line svg {
+    margin-left: 10px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .link-line {
+    padding-bottom: 3px;
+  }
+
+  .link-line:after {
+    height: 2px;
+  }
+
+  .link-line:before {
+    height: 2px;
+  }
+
+  .link {
+    padding: 0 10px;
+  }
+
+  .link:after {
+    font-size: 16px;
+    right: -5px;
+  }
+
+  .link:before {
+    font-size: 16px;
+    left: -5px;
+  }
+}
