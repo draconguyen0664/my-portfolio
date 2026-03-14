@@ -238,3 +238,198 @@ body.loaded .hero-title .hero-word:last-child::after {
     left: -5px;
   }
 }
+
+.link {
+  font-family: 'Spline Sans Mono';
+  font-weight: 300;
+  font-size: 24rem;
+  line-height: 99%;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+  position: relative;
+  padding: 0 35rem;
+  transition: 0.5s var(--transition-main);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 1100px) {
+    padding: 0 25px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  @media (max-width: 430px) {
+    padding: 0 20px;
+  }
+
+  span {
+    font-size: 24rem;
+    display: inline-block;
+
+    @media (max-width: 1100px) {
+      font-size: 20px;
+    }
+  }
+
+  &:after {
+    content: ']';
+    position: absolute;
+    top: 50%;
+    font-size: 20rem;
+    transform: translateY(-50%);
+    right: 12rem;
+    transition: 0.5s var(--transition-main);
+
+    @media (max-width: 1100px) {
+      font-size: 20px;
+    }
+  }
+
+  &:before {
+    content: '[';
+    position: absolute;
+    top: 50%;
+    font-size: 20rem;
+    transform: translateY(-50%);
+    left: 12rem;
+    transition: 0.5s var(--transition-main);
+
+    @media (max-width: 1100px) {
+      font-size: 20px;
+    }
+  }
+
+  &:hover {
+    &:after {
+      right: 0;
+    }
+    &:before {
+      left: 0;
+    }
+  }
+}
+
+.link .clone {
+  position: absolute;
+  left: 50%;
+  translate: -50% 100%;
+  top: 0;
+  display: flex;
+
+  @media (max-width: 1100px) {
+    display: none;
+  }
+}
+
+*:where(
+    :not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)
+  ) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 18rem;
+}
+
+html,
+body {
+  font-size: 0.0520834vw;
+  /* font-size: 0.520833vw; */
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a,
+button {
+  cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol,
+ul,
+menu {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-inline-size: 100%;
+  max-block-size: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input,
+textarea {
+  -webkit-user-select: auto;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+/* minimum style to allow to style meter element */
+meter {
+  -webkit-appearance: revert;
+  appearance: revert;
+}
+
+/* preformatted text - use only for this feature */
+:where(pre) {
+  all: revert;
+}
+
+/* reset default text opacity of input placeholder */
+::placeholder {
+  color: unset;
+}
+
+/* remove default dot (•) sign */
+::marker {
+  content: initial;
+}
+
+/* fix the feature of 'hidden' attribute.
+   display:revert; revert to element instead of attribute */
+:where([hidden]) {
+  display: none;
+}
+
+/* revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly.
+   - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element */
+:where([contenteditable]:not([contenteditable='false'])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  -webkit-user-select: auto;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable='true']) {
+  -webkit-user-drag: element;
+}
+
+/* Revert Modal native behavior */
+:where(dialog:modal) {
+  all: revert;
+}
+
+/* h1,p,a,span{
+    font-size: 1.8rem;
+} */
