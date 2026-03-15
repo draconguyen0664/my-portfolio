@@ -202,7 +202,7 @@ const About = () => {
                 <div className='about-second-text text-first'>
                   <div className='text-first__img'>
                     <img
-                      src='./img/olha3.jpg'
+                      src='./draco.jpg'
                       alt=''
                     />
                   </div>
@@ -238,7 +238,7 @@ const About = () => {
                     {window.innerWidth > 1100 ? (
                       <>
                         <span className='text-second__text-wrapper'>
-                          <span>a Senior UX/UI Designer with over 7</span>
+                          <span>a Senior UX/UI Designer with over 5</span>
                         </span>
                         <span className='text-second__text-wrapper'>
                           <span>years of experience in creating digital</span>

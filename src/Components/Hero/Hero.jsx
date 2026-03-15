@@ -88,10 +88,10 @@ const Hero = () => {
           <div className='hero-designer'>
             <div className='hero-designer__descr'>
               <p>
-                <span>/ ART DIRECTION</span>
+                <span>/ PRODUCT DESIGN</span>
               </p>
               <p>
-                <span>/ web DESIGN (UX/UI)</span>
+                <span>/ UX/UI DESIGN</span>
               </p>
               <p>
                 <span>/ web DEVELOPMENT</span>
@@ -107,11 +107,11 @@ const Hero = () => {
           <div className='hero-based'>
             <span>based</span>
             <span>in</span>
-            <span>ukraine</span>
+            <span>viet nam</span>
           </div>
           <div className='hero-description'>
             <p>
-              I’m experienced web and ux/ui designer, who design memorable web
+              I’m experienced web, mobile and ux/ui designer, who design memorable web, mobile
               experiences for brands OF ALL SIZES
             </p>
           </div>

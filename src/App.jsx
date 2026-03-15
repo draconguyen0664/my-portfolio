@@ -6,6 +6,8 @@ import { CopyProvider } from "./Components/Animation/CopyContext";
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 import CopyTooltip from "./Components/Animation/CopyTooltip";
+import AnimatedRoutes from "./AnimatedRoutes";
+import RouteScrollTop from "./RouteScrollTop";
 
 function App() {
   const [heroVisible, setHeroVisible] = useState(false);
@@ -32,12 +34,12 @@ function App() {
           <CopyProvider>
             <BrowserRouter>
               <Header />
-              {/* <RouteScrollTop />
-            <AnimatedRoutes
-              heroVisible={heroVisible}
-              setHeroVisible={setHeroVisible}
-              scrollerRef={scrollerRef}
-            /> */}
+              <RouteScrollTop />
+              <AnimatedRoutes
+                heroVisible={heroVisible}
+                setHeroVisible={setHeroVisible}
+                scrollerRef={scrollerRef}
+              />
               <Footer />
             </BrowserRouter>
             {window.innerWidth > 1100 ? <CopyTooltip /> : null}
