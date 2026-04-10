@@ -1,0 +1,68 @@
+.projects {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  position: relative;
+  padding-top: 150rem;
+  height: 400dvh;
+
+  @media (max-width: 1100px) {
+    padding-top: 50px;
+  }
+
+  .projects-canvas {
+    width: 100%;
+    height: 100dvh;
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    .link {
+      position: absolute;
+      bottom: 250rem;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @media (max-width: 1100px) {
+        bottom: 50px;
+      }
+    }
+
+    &__swipe {
+      display: none;
+
+      @media (max-width: 1100px) {
+        display: block;
+        position: absolute;
+        bottom: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 4px 20px;
+        background-color: rgba(0, 0, 0, 0.596);
+        color: #fff;
+        font-size: 12px;
+        border-radius: 3px;
+        backdrop-filter: blur(5px);
+      }
+    }
+  }
+
+  &__title {
+    text-align: center;
+    position: relative;
+    z-index: 101;
+    margin-bottom: 100rem;
+
+    @media (max-width: 1100px) {
+      margin-bottom: 30px;
+    }
+
+    span {
+      font-size: 150rem;
+      letter-spacing: -12rem;
+
+      @media (max-width: 1100px) {
+        font-size: 300rem;
+      }
+    }
+  }
+}
