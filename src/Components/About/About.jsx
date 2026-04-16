@@ -329,7 +329,7 @@ const About = () => {
                         <img src="./draco2.png" alt="" />
                       </div>
                       <div className="text-third__img">
-                        <img src="./img/olha2.jpg" alt="" />
+                        <img src="./draco3.png" alt="" />
                       </div>
                     </>
                   ) : null}
