@@ -29,7 +29,7 @@ function SimplePlaybackGate() {
     const triggerEl = about || document.querySelector(".projects");
     const endEl = services || triggerEl;
 
-    if (!triggerEl) return; // на всякий случай
+    if (!triggerEl) return;
 
     const enable = () => set({ frameloop: "always" });
     const disable = () => set({ frameloop: "demand" });
@@ -200,7 +200,7 @@ function IntroRise({ sectionRef, children }) {
         rotation={[Math.PI / 2, 0, 0]}
         length={2}
         radius={0.45}
-        texture="/img/beam_linear_1024x2048.png"
+        texture="/beam_linear_1024x2048.png"
         additive
       />
     </group>
@@ -222,12 +222,12 @@ export default function ProjectRoom() {
   }, []);
 
   const slides = [
-    { img: "./img/projects/art6.jpg", link: "/max-milkin" },
-    { img: "./img/projects/art4.jpg", link: "/fashion-week" },
-    { img: "./img/projects/art1.jpg", link: "/press-play" },
-    { img: "./img/projects/art5.jpg", link: "/raine" },
-    { img: "./img/projects/art2.jpg", link: "/alex-monroe" },
-    { img: "./img/projects/art3.jpg", link: "/outside" },
+    { img: "./projects/art6.jpg", link: "/max-milkin" },
+    { img: "./projects/art4.jpg", link: "/fashion-week" },
+    { img: "./projects/art1.jpg", link: "/press-play" },
+    { img: "./projects/art5.jpg", link: "/raine" },
+    { img: "./projects/art2.jpg", link: "/alex-monroe" },
+    { img: "./projects/art3.jpg", link: "/outside" },
   ];
 
   return (

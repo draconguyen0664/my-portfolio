@@ -4,7 +4,7 @@ import { TextureLoader } from "three/src/loaders/TextureLoader";
 import { useMemo } from "react";
 
 export default function BeamCone({
-  texture = "/img/beam_linear_1024x2048.png",
+  texture = "/beam_linear_1024x2048.png",
   color = "white",
   length = 2.2,
   radius = 0.45,

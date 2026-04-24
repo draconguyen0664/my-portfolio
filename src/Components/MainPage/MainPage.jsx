@@ -7,7 +7,7 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { motion } from "framer-motion";
 import About from "../About/About";
 import FormSection from "../FormSection/FormSection";
-// import ProjectRoom from "../ProjectRoom/ProjectRoom";
+import ProjectRoom from "../ProjectRoom/ProjectRoom";
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -67,7 +67,7 @@ const MainPage = ({ heroVisible, setHeroVisible }) => {
         <Hero visible={heroVisible} setVisible={setHeroVisible} />
         <div className="dark-zone">
           <About />
-          {/* <ProjectRoom heroVisible={heroVisible} /> */}
+          <ProjectRoom heroVisible={heroVisible} />
         </div>
         <ServicesSection />
         <FormSection />
