@@ -224,7 +224,7 @@ export default function ProjectRoom() {
   const slides = [
     { img: "./projects/art6.jpg", link: "/max-milkin" },
     { img: "./projects/art4.jpg", link: "/fashion-week" },
-    { img: "./projects/art1.jpg", link: "/press-play" },
+    { img: "./projects/art1.png", link: "/press-play" },
     { img: "./projects/art5.jpg", link: "/raine" },
     { img: "./projects/art2.jpg", link: "/alex-monroe" },
     { img: "./projects/art3.jpg", link: "/outside" },
